@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main is the entry point
- * we're using printf instead of
- * puts
+ * main - Entry point
+ * print message
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

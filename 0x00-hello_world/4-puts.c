@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main is the function to start the file
- * puts is the print command
- * return is the command for the output
+ * main - Entry point
+ * print message
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
