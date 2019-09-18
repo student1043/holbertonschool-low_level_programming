@@ -1,7 +1,11 @@
 #include <stdio.h>
 int main(void)
+/**
+ * main is the entry point
+ * we're using printf instead of
+ * puts
+*/
 {
-char str[55]="with proper grammar, but the outcome is a piece of art,";
-printf("%s \n" , str);
-return 0;
+printf("%s\n" , "with proper grammar, but the outcome is a piece of art,");
+ return (0);
 }
