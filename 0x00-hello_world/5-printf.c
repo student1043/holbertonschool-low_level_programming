@@ -1,11 +1,11 @@
 #include <stdio.h>
-int main(void)
 /**
  * main is the entry point
  * we're using printf instead of
  * puts
-*/
+ */
+int main(void)
 {
-printf("%s\n" , "with proper grammar, but the outcome is a piece of art,");
+printf("%s\n", "with proper grammar, but the outcome is a piece of art,");
  return (0);
 }
