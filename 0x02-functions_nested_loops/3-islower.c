@@ -1,8 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - Entry point
- * putchar a-z
+ * _islower - Entry point
+ * @c: for letters
  * Return: Always 0 (Success)
  */
 int _islower(int c)
@@ -11,7 +11,7 @@ if (c >= 'a' && c <= 'z')
 {
 return (1);
 }
-else 
+else
 {
 return (0);
 }
