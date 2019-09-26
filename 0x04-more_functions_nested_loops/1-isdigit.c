@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * _isdigit - check the code for Holberton School students.
- * @c: char 
+ * @c: char
  * Return: Always 0.
  */
 int _isdigit(int c)
