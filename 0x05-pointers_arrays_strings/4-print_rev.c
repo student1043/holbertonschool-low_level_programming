@@ -13,9 +13,9 @@ while (s[c] != '\0')
 {
 c++;
 }
-for (i = 0; i <= c; i++)
+for (i = c; i >= 0; i--)
 {
-_putchar(s[c - i]);
+_putchar(s[i]);
 }
 _putchar('\n');
 }
