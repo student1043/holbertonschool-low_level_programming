@@ -11,7 +11,5 @@ int _strlen(char *s)
 int c = 0;
 while (s[c] != '\0')
 c++;
-_putchar(c / 10 + '0');
-_putchar(c % 10);
-return (0);
+return(c);
 }
