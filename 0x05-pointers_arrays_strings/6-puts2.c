@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
  * puts2 - check the code for Holberton School students.
  * @str: is string
@@ -14,7 +13,7 @@ while (str[c] != '\0')
 {
 c++;
 }
-for (i = 0; i < c - 1; i++)
+for (i = 0; i < c; i++)
 {
 _putchar(str[i]);
 i++;
