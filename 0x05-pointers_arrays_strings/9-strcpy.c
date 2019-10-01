@@ -15,7 +15,6 @@ while (src[c] != '\0')
 c++;
 for (i = 0; i < c && src[i] != '\0'; i++)
 dest[i] = src[i];
-for ( ; i < c; i++)
 dest[i] = '\0';
 return (dest);
 }
