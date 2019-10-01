@@ -15,12 +15,12 @@ c++;
 }
 if (c % 2 == 0)
 {
-for (i = c / 2; i <= c; i++)
+for (i = c / 2; i < c; i++)
 _putchar(str[i]);
 }
-else if (c % 2 != 0)
+else
 {
-for (i = (c - 1) / 2; i <= c; i++)
+for (i = (c - 1) / 2; i < c; i++)
 _putchar(str[i]);
 }
 _putchar('\n');
