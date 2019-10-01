@@ -14,11 +14,12 @@ while (str[j] != '\0')
 {
 j++;
 }
-while (*str)
+while (j != i)
 {
 for (i = 0; i < j - 1; i += 2)
+{
 _putchar(str[i]);
-break;
+}
 }
 _putchar('\n');
 }
