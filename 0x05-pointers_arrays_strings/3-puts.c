@@ -8,6 +8,6 @@
  */
 void _puts(char *str)
 {
-fputs(str, stdout);
-fputs("\n", stdout);
+printf("%s", str);
+printf("\n");
 }
