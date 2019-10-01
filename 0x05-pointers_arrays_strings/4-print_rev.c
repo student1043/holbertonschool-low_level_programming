@@ -1,8 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
- *
+ * print_rev - check the code for Holberton School students.
+ * @s: string
  * Return: Always 0.
  */
 void print_rev(char *s)
@@ -15,7 +15,7 @@ c++;
 }
 for (i = c; i >= 0; i--)
 {
-putchar(s[i]);
+_putchar(s[i]);
 }
-putchar('\n');
+_putchar('\n');
 }
