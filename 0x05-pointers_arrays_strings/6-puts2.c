@@ -14,10 +14,10 @@ while (str[c] != '\0')
 {
 c++;
 }
-while (c != i)
+for (i = 0; i < c - 1; i++)
 {
-for (i = 0; i < c - 1; i += 2)
 _putchar(str[i]);
+i++;
 }
 _putchar('\n');
 }
