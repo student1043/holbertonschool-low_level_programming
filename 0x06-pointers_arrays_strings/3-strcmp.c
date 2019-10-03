@@ -1,32 +1,26 @@
 #include "holberton.h"
-#include <stdio.h>
-
 /**
- * _strcmp - check the code for Holberton School students.
- * @s1: string
- * @s2: string
- * Return: Always 0.
- */
+*_strcmp - concatenates two strings
+*
+*@s1: destination string
+*
+*@s2: source string
+*
+*Return: return a character
+*/
 int _strcmp(char *s1, char *s2)
 {
-int i = 0;
-int j = 0;
-while (*(s1 + i) != '\0')
+int i;
+int comp;
+for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
 {
-i++;
-}
-while (*(s2 + j) != '\0')
+if (s1[i] != s2[i])
 {
-j++;
-}
-if (i - j < 0)
-{
-return (-15);
-}
-else if (i - j > 0)
-{
-return (15);
+comp = s1[i] - s2[i];
+s1[i + 1] = '\0';
 }
 else
-return (0);
+comp = 0;
+}
+return (comp);
 }
