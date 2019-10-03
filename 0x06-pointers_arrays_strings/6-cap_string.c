@@ -1,32 +1,33 @@
-#include "holberton.h"
-#include <stdio.h>
-
 /**
- * *cap_string - check the code for Holberton School students.
- * @s: string
- * Return: Always 0.
- */
-char *cap_string(char *s)
+* cap_string - capitalizes all words of a string
+* @c: pointer to the string
+*
+* Return: pointer to a string c
+*/
+char *cap_string(char *c)
 {
-int i, j, k;
-char *lower = "abcdefghijklmnopqrstuvwxyz";
-char *upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char separators[] = {',', ';', ' ', '.', '!', '?', '"', '(', ')',
-'{', '}', '\t', '\n' };
-for (i = 0; s[i] != '\0'; i++)
+int i = 0, j = 0;
+const int ASCII_DIF = 32;
+char seps[] = {
+' ', '\t', '\n', ',', ';', '.',
+'!', '?', '"', '(', ')', '{', '}'
+};
+
+if (c[0] >= 'a' && c[0] <= 'z')
+c[0] = c[0] - ASCII_DIF;
+
+while (c[i] != '\0')
 {
-for (j = 0; separators[j]; j++)
+for (j = 0; seps[j] != '\0'; j++)
 {
-if (s[i - 1] == separators[j])
+if (c[i - 1] == seps[j])
 {
-for (k = 0; k < 26 ; k++)
-if (s[i] == lower[k])
-{
-s[i] = upper[k];
-break;
+if (c[i] >= 'a' && c[i] <= 'z')
+c[i] = c[i] - ASCII_DIF;
 }
 }
+i++;
 }
-}
-return (s);
+
+return (c);
 }
