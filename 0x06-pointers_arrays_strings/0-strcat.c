@@ -2,24 +2,24 @@
 #include <stdio.h>
 
 /**
- * *_strncat - check the code for Holberton School students.
+ * *_strcat - check the code for Holberton School students.
  * @dest: destination
  * @src: source
  * Return: Always 0.
  */
 char *_strcat(char *dest, char *src)
 {
-char *dest1 = dest;
-while (*dest != '\0')
+int i = 0;
+int j = 0;
+while (*(dest + i) != '\0')
 {
-dest++;
+i++;
 }
-while (*src != '\0') 
+while (*(src + j) != '\0')
 {
-*dest = *src;
-dest++;
-src++;
+*(dest + i) = *(src + j);
+j++;
+i++;
 }
-*dest = '\0';
-return (dest1);
+return (dest);
 }
