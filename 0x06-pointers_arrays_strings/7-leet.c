@@ -1,27 +1,25 @@
-#include "holberton.h"
-#include <stdio.h>
-
 /**
- * *cap_string - check the code for Holberton School students.
- * @s: string
- * Return: Always 0.
- */
+* leet - encodes a string into 1337
+* @s: string
+*
+* Return: pointer to a string
+*/
 char *leet(char *s)
 {
-int i, j, k;
-char *lower = "aAeEoOtTlL";
-char *upper = "4433007711";
-for (i = 0; s[i] != '\0'; i++)
+int i = 0, j;
+char letters[] = "oOlLeEaAtT";
+char numbers[] = "0011334477";
+
+while (s[i] != '\0')
 {
-for (j = 0; lower[j]; j++)
+for (j = 0; letters[j] != '\0'; j++)
 {
-for (k = 0; k < 11 ; k++)
-if (s[i] == lower[k])
-{
-s[i] = upper[k];
-break;
+if (s[i] == letters[j])
+s[i] = numbers[j];
 }
+
+i++;
 }
-}
+
 return (s);
 }
