@@ -8,10 +8,14 @@
  */
 char *_strchr(char *s, char c)
 {
-for (; *s != '\0'; s++)
-if (*s == c)
+int i = 0;
+while (*(s + i))
 {
-return (s);
+if (*(s + i) == c)
+return (s + i);
+i++;
 }
+if (*(s + i) == c)
+return (s + i);
 return (0);
 }
