@@ -9,8 +9,20 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-int ret=0;
-while(*s && strchr(accept,*s++))
-ret++;
-return (ret);  
+unsigned int i,j;
+i=0;
+while(*(s+i)){
+j=0;
+while(*(accept+j)){
+if(*(s+i) == *(accept+j)){
+break;
+}
+j++;
+}
+if(!*(accept+j)){
+return i;
+}
+i++;
+}
+return i;
 }
