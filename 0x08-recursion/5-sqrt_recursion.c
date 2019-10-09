@@ -24,10 +24,10 @@ return (sqrCheck(n, (n + 1) / 2));
 
 int sqrCheck(int a, int b)
 {
-	if (b * b == a)
-		return (b);
-	else if (b == 1)
-		return (-1);
-	else
-		return (sqrCheck(a, b - 1));
+if (b * b == a)
+return (b);
+else if (b == 1)
+return (-1);
+else
+return (sqrCheck(a, b - 1));
 }
