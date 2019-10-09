@@ -14,4 +14,7 @@ int sqrCheck(int a, int b);
 int palindrome_checker(char *s, int start, int end);
 int comparator(char *s, int n1, int n2);
 int power_operation(int n, int c);
+int _strlen(char *s1, char*s2);
+int comparator1(char *s1, char *s2, int n1, int n2);
+int wildcmp(char *s1, char *s2);
 #endif
