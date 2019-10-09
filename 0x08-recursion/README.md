@@ -1,0 +1,1 @@
+Recursions are better than pointers
