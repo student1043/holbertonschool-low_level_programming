@@ -11,4 +11,7 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int prime(int num,int i);
 int sqrCheck(int a, int b);
+int palindrome_checker(char *s, int start, int end);
+int comparator(char *s, int n1, int n2);
+int power_operation(int n, int c);
 #endif
