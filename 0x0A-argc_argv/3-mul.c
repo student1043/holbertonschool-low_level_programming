@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "holberton.h"
-
+#include <stdlib.h>
 /**
  * main - writes the character c to stdout
  * @argv: The character to print
@@ -10,7 +10,20 @@
 
 int main(int argc, char *argv[])
 {
-(void) argv;
-printf("%d\n", argc);
+int a;
+int i;
+int result;
+(void) argc;
+if (argv[0] && argv[1])
+{
+a = atoi(argv[1]);
+i = atoi(argv[2]);
+result = a *i;
+printf("%i\n", result);
+}
+else
+{
+printf("Error\n");
+}
 return (0);
 }
