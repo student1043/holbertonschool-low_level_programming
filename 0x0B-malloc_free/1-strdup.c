@@ -14,7 +14,14 @@ unsigned int i;
 copy = malloc(strlen(str) * sizeof(*str));
 for (i = 0; i < strlen(str); i++)
 {
+if (str[i] != '\0')
+{
 copy[i] = str[i];
+}
+else
+{
+return (NULL);
+}
 }
 return (copy);
 }
