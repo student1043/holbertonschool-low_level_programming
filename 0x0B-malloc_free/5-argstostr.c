@@ -3,8 +3,9 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * argstostr - check the code for Holberton School students.
+ * @ac: integer
+ * @av: string
  * Return: Always 0.
  */
 char *argstostr(int ac, char **av)
@@ -20,7 +21,7 @@ for (i = 0; i < ac; i++)
 for (j = 0; av[i][j] != '\0'; j++)
 k++;
 }
-s = malloc(sizeof(char) * k + ac );
+s = malloc(sizeof(char) * k + ac + 1);
 k = 0;
 for (i = 0; i < ac; i++)
 {
