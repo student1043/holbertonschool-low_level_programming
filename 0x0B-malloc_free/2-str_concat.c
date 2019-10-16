@@ -24,8 +24,8 @@ for (i = 0; i < len2; i++)
 {
 a[i + len1] = s2[i];
 }
-a[lentot-1] = '\0';
+a[lentot] = '\0';
 return(a);
-if (len1 == 0 || len2 == 0)
+if (len1 == NULL || len2 == NULL)
 return(NULL);
 }

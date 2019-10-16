@@ -10,18 +10,21 @@
 char *_strdup(char *str)
 {
 char *copy;
-unsigned int i;
-copy = malloc(strlen(str) * sizeof(*str));
-for (i = 0; i < strlen(str); i++)
-{
-if (str[i] != '\0')
-{
-copy[i] = str[i];
-}
-else
+char *p;
+unsigned int i = 0;
+if (str == NULL)
 {
 return (NULL);
 }
+else
+{
+while (str[i])
+str++;
+copy = malloc(i + 1);
+p = copy;
+while (*str)
+*p++ = *str++;
+p[i] = '\0';
 }
-return (copy);
+return (str);
 }
