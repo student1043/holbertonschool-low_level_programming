@@ -1,31 +1,43 @@
-#include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
+
 /**
- * *str_concat - check the code for Holberton School students.
- * @s1: string
- * @s2: string
- * Return: Always 0.
- */
+* str_concat - create an array with init
+* @s1: size of the array.
+* @s2: size of the array.
+* Return: the array created
+*/
+
 char *str_concat(char *s1, char *s2)
 {
-int len1,len2,lentot,i=0;
-char *a;
-len1 = strlen(s1);
-len2 = strlen(s2);
-lentot = len1+len2+1;
-a = malloc(lentot);
-for (i = 0; i < len1; i++)
+
+int size = 0;
+int size2 = 0;
+int i = 0;
+char *r;
+
+if (s1 != NULL)
 {
-a[i] = s1[i];
+while (s1[size] != '\0')
+size++;
 }
-for (i = 0; i < len2; i++)
+
+if (s2 != NULL)
 {
-a[i + len1] = s2[i];
+while (s2[size2] != '\0')
+size2++;
 }
-a[lentot] = '\0';
-return(a);
-if (len1 == NULL || len2 == NULL)
-return(NULL);
+
+r = malloc(sizeof(char) * (size + size2 + 1));
+if (r == NULL)
+return (NULL);
+
+for (i = 0; i < size; i++)
+r[i] = s1[i];
+
+for (i = 0; i < size2; i++)
+r[i + size] = s2[i];
+r[size + size2] = '\0';
+
+return (r);
 }
