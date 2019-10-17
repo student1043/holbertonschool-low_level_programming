@@ -4,9 +4,9 @@
 #include <string.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * array_range - prints buffer in hexa
+ * @min: the address of memory to print
+ * @max: the size of the memory to print
  *
  * Return: Nothing.
  */
@@ -19,7 +19,7 @@ return (NULL);
 ptr = (int *)malloc(sizeof(int) * (max + 1));
 if (ptr == NULL)
 return (NULL);
-for (i = 0;i <= max; i++)
+for (i = 0; i <= max; i++)
 ptr[i] = i;
 return (ptr);
 }
