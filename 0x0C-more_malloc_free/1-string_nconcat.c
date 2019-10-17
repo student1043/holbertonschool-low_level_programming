@@ -1,44 +1,44 @@
+
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * string_nconcat - check the code for Holberton School students.
- * @s1: char
- * @s2: char
- * @n: integer
- * Return: Always 0.
+ * string_nconcat - concatenates two strings.
+ * @s1: first string
+ * @s2: second string
+ * @n: number of bytes of s2
+ *
+ * Return: char pointer
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+unsigned int i, j, k;
+char *str;
 
-unsigned int size = 0;
-unsigned int size2 = 0;
-unsigned int i = 0;
-char *r;
-
-if (s1 != NULL)
+if (s1 == NULL)
+i = 0;
+else
 {
-while (s1[size] != '\0')
-size++;
+for (i = 0; s1[i]; i++)
+;
 }
-
-if (s2 != NULL)
+if (s2 == NULL)
+j = 0;
+else
 {
-while (s2[size2] != '\0')
-size2++;
+for (j = 0; s2[j]; j++)
+;
 }
-
-r = malloc(sizeof(char) * (n + 1));
-if (r == NULL)
+if (j > n)
+j = n;
+str = malloc(sizeof(char) * (i + j + 1));
+if (str == NULL)
 return (NULL);
 
-for (i = 0; i < size; i++)
-r[i] = s1[i];
-
-for (i = 0; i < n; i++)
-r[i + size] = s2[i];
-r[size + n] = '\0';
-
-return (r);
+for (k = 0; k < i; k++)
+str[k] = s1[k];
+for (k = 0; k < j; k++)
+str[k + i] = s2[k];
+str[i + j] = '\0';
+return (str);
 }

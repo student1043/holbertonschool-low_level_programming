@@ -1,25 +1,27 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * array_range - prints buffer in hexa
- * @min: the address of memory to print
- * @max: the size of the memory to print
+ * array_range - creates an array of integers.
+ * @min: first integer number
+ * @max: last integer number
  *
- * Return: Nothing.
+ * Return: pointer to newly allocated memory or NULL if fails
  */
 int *array_range(int min, int max)
 {
-int i;
-int *ptr;
+int i, length;
+int *array;
+
 if (min > max)
 return (NULL);
-ptr = (int *)malloc(sizeof(int) * (max + 1));
-if (ptr == NULL)
+length = max - min + 1;
+array = malloc(sizeof(int) * length);
+if (array == NULL)
 return (NULL);
-for (i = 0; i <= max; i++)
-ptr[i] = i;
-return (ptr);
+for (i = 0; i < length; i++, min++)
+{
+array[i] = min;
+}
+return (array);
 }
