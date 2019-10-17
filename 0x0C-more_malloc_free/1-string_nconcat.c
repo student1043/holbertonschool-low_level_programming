@@ -29,7 +29,7 @@ while (s2[size2] != '\0')
 size2++;
 }
 
-r = malloc(sizeof(char) * (size + size2 + 1));
+r = malloc(sizeof(char) * (n + 1));
 if (r == NULL)
 return (NULL);
 
@@ -38,7 +38,7 @@ r[i] = s1[i];
 
 for (i = 0; i < n; i++)
 r[i + size] = s2[i];
-r[size + size2] = '\0';
+r[size + n] = '\0';
 
 return (r);
 }
