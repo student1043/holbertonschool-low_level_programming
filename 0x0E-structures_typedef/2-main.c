@@ -1,6 +1,5 @@
-#include "1-pi.h"
-#include "1-pi.h"
 #include <stdio.h>
+#include "dog.h"
 
 /**
  * main - check the code for Holberton School students.
@@ -9,11 +8,11 @@
  */
 int main(void)
 {
-    float a;
-    float r;
+    struct dog my_dog;
 
-    r = 98;
-    a = PI * r * r; 
-    printf("%.3f\n", a);
+    my_dog.name = "Django";
+    my_dog.age = 3.5;
+    my_dog.owner = "Jay";
+    print_dog(&my_dog);
     return (0);
 }
