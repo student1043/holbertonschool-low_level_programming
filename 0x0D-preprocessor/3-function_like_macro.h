@@ -1,4 +1,3 @@
-#pragma once
 #ifndef ABS
-#define ABS(N) ((N < 0) ? (-N) : (N))
+#define ABS(x) ((x < 0) ? (-x) : (x))
 #endif
