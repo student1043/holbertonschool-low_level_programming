@@ -8,7 +8,7 @@
  * @action: action done on array;
  * Return: Nothing.
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+void array_iterator(int *array, unsigned size, void (*action)(int))
 {
 unsigned int i;
 for (i = 0; i < size; i++)
