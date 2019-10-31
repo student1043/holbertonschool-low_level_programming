@@ -4,23 +4,33 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * print_list - writes the character c to stdout
+ * *add_node - writes the character c to stdout
  * @head: New List
- * str: string
+ * @str: string
  * Return: On success 1.
  */
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *new_node;
-head = malloc(sizeof(list_t));
+unsigned int length;
 new_node = malloc(sizeof(list_t));
-if (head)
+if (str == NULL)
 {
+return (NULL);
+}
+if (new_node == NULL)
+{
+return (NULL);
+}
 new_node->str = strdup(str);
+if (new_node->str == NULL)
+{
+free(new_node);
+return (NULL);
+}
+for (length = 0; new_node->str[length]; length++)
+new_node->len = length + 1;
 new_node->next = *head;
 *head = new_node;
-}
-else
-return (NULL);
-return (*head);
+return (new_node);
 }
