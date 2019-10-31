@@ -1,21 +1,19 @@
-#include <stdio.h>
-#include <unistd.h>
 #include "lists.h"
-#include <string.h>
-#include <stdlib.h>
+
 /**
- * free_list - writes the character c to stdout
- * @head: New List
- * Return: On success 1.
- */
+* free_list - frees a list
+* @head: head of the linked list.
+* Return: no return. // Aladin Bensassi
+*/
+
 void free_list(list_t *head)
 {
-list_t *temp;
-while(head)
+list_t *c;
+
+while ((c = head) != NULL)
 {
-temp = head;
 head = head->next;
-free(temp->str);
-free(temp);
+free(c->str);
+free(c);
 }
 }
