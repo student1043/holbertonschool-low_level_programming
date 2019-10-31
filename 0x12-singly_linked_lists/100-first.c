@@ -8,7 +8,7 @@
  * 
  * Return: On success 1.
  */
-void Beforemain (void)
+void __attribute__ ((constructor)) Beforemain()
 {
 printf("You're beat! and yet, you must allow");
 printf(",\nI bore my house upon my back!\n");
