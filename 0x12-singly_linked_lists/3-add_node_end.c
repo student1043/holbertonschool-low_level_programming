@@ -29,7 +29,7 @@ free(new_node);
 return (NULL);
 }
 for (length = 0; new_node->str[length]; length++)
-new_node->len = length + 1; 
+new_node->len = length + 1;
 new_node->next = NULL;
 if (*head == NULL)
 {
