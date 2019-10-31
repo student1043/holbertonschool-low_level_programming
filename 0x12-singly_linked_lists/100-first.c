@@ -8,7 +8,6 @@
  * 
  * Return: On success 1.
  */
-void Beforemain (void) __attribute__ ((constructor));
 void Beforemain (void)
 {
 printf("You're beat! and yet, you must allow");
