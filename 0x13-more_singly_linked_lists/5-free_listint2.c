@@ -4,17 +4,19 @@
 #include "lists.h"
 
 /**
- * free_listint2 - check the code for Holberton School students.
+ * free_listint - check the code for Holberton School students.
  * @head: list
  * Return: Always 0.
  */
 void free_listint2(listint_t **head)
 {
 listint_t *c;
-while ((c = *head) != NULL)
+if (*head == NULL)
+return;
+while(*head)
 {
-*head = (*head)->next;
-free(c);
+c = (*head)->next;
+free(*head);
+*head = c;
 }
-*head = NULL;
 }
