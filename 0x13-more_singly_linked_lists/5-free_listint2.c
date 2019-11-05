@@ -16,5 +16,5 @@ while ((c = *head) != NULL)
 *head = (*head)->next;
 free(c);
 }
-head = NULL;
+*head = NULL;
 }
