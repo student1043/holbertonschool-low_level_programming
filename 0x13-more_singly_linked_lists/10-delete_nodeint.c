@@ -4,10 +4,9 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - check the code for Holberton School students.
+ * delete_nodeint_at_index - check the code for Holberton School students.
  * @head: list
- * @idx: the index
- * @n: integer
+ * @index: the index
  * Return: Always 0.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
