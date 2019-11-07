@@ -11,8 +11,19 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned int c, count = 0;
-for (c = n ^ m; c != 0; c = c & (c - 1))
-count++;
-return (count);
+unsigned long int a = 1;
+unsigned long int b;
+unsigned long int c;
+unsigned int i = 0;
+unsigned int j = 0;
+b = n ^ m;
+c = (sizeof(unsigned long int) * 8);
+while (i < c)
+{
+if (a == (b & a))
+j++;
+a <<= 1;
+i++;
+}
+return (j);
 }
