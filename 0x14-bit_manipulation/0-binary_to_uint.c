@@ -14,9 +14,10 @@ unsigned int k = 1;
 unsigned int i = 0;
 int c;
 unsigned int len;
-
-len = strlen(b);
-
+while (b[len] != '\0')
+{
+len++;
+}
 for (c = len - 1; c >= 0; c--)
 {
 if (b[c] != 48 && b[c] != 49)
