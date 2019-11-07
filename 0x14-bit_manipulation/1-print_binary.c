@@ -10,7 +10,7 @@
  */
 void print_binary(unsigned long int n)
 {
-unsigned int max_len = n;
+unsigned long int max_len = n;
 if (n == 0)
 printf("0");
 while (max_len > 0)
