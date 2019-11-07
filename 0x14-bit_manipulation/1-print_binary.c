@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 {
 unsigned long int max_len = n;
 if (n == 0)
-printf("0");
+printf("%lu", n);
 while (max_len > 0)
 {
 if ((n & max_len) == 0)
