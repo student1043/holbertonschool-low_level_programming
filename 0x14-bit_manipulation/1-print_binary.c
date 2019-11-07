@@ -10,15 +10,7 @@
  */
 void print_binary(unsigned long int n)
 {
-unsigned long int max_len = n;
-if (n == 0)
-_putchar('0');
-while (max_len > 0)
-{
-if ((n & max_len) == 0)
-_putchar('0');
-else
-_putchar('1');
-max_len = max_len >> 1;
-}
+if (n > 1)
+print_binary(n >> 1);
+printf("%ld", n & 1);
 }
