@@ -10,10 +10,14 @@
  */
 void print_binary(unsigned long int n)
 {
-unsigned int i;
-for (i = (1 << 31) ; i > 0; i = (i>>1))
-if(n & i)
-printf("1");
+int c;
+unsigned int k;
+for (c = 31; c >= 0; c--)
+{
+k = n >> c;
+if (k & 1)
+putchar('1');
 else
-printf("0");
+putchar('0');
+}
 }
