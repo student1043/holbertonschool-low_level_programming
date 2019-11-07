@@ -10,14 +10,15 @@
  */
 void print_binary(unsigned long int n)
 {
-int c;
-unsigned int k;
-for (c = 31; c >= 0; c--)
+unsigned int max_len = n;
+if (n == 0)
+printf("0");
+while (max_len > 0)
 {
-k = n >> c;
-if (k & 1)
-putchar('1');
+if ((n & max_len) == 0)
+printf("0");
 else
-putchar('0');
+printf("1");
+max_len = max_len >> 1;
 }
 }
