@@ -6,7 +6,7 @@
  * Return: An unsigned integer, number of nodes
  */
 
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 
 const dlistint_t *p = h;
