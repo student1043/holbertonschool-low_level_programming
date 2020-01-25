@@ -4,8 +4,8 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * hash_table_create - check the code for Holberton School students.
+ * @size: size of the hashtable
  * Return: Always EXIT_SUCCESS.
  */
 
