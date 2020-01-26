@@ -22,6 +22,7 @@ return (NULL);
 hashy->size = size;
 hashy->array = malloc(sizeof(*hashy));
 if (!hashy->array)
+free(hashy);
 return (NULL);
 
 return (hashy);
