@@ -20,7 +20,7 @@ hash_node_t *curr;
 if ((!key || !value) || (!key[0] || !ht) || (!ht->array))
 return (0);
 node = malloc(sizeof(hash_node_t *));
-if(!node)
+if (!node)
 return (0);
 node->key = strdup(key);
 node->value = strdup(value);
