@@ -17,8 +17,8 @@ unsigned long int my_index;
 hash_node_t *node;
 hash_node_t *curr;
 
-if ((!key || !value) || (!lkey[0] || !ht) || (!ht->array))
-return (0)
+if ((!key || !value) || (!key[0] || !ht) || (!ht->array))
+return (0);
 node = malloc(sizeof(hash_node_t *));
 if(!node)
 return (0);
