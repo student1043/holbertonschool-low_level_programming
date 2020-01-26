@@ -27,5 +27,6 @@ if (!hashy->array)
 {
 return (NULL);
 }
+
 return (hashy);
 }
