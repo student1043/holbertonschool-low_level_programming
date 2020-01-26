@@ -12,18 +12,18 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 hash_table_t *hashy;
-if (size <= 0)
-return (NULL);
 
 hashy = malloc(sizeof(hash_table_t));
 if (!hashy)
 return (NULL);
 
-hashy->size = size;
 hashy->array = malloc(sizeof(*hashy));
 if (!hashy->array)
-free(hashy);
 return (NULL);
 
+if (size <= 0)
+return (NULL);
+
+hashy->size = size;
 return (hashy);
 }
