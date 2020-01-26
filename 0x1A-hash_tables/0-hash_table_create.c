@@ -17,7 +17,7 @@ hashy = malloc(sizeof(hash_table_t));
 if (!hashy)
 return (NULL);
 
-hashy->array = malloc(sizeof(*hashy));
+hashy->array = malloc(sizeof(hash_node_t *) * size);
 if (!hashy->array)
 return (NULL);
 
