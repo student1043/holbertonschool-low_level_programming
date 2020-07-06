@@ -22,7 +22,7 @@ printf("%d, ", array[l]);
 
 printf("%d\n", array[l]);
 middle = (start + end) / 2;
-if (array[l] == value && (i == end || array[l - 1] != value))
+if (array[l] == value && (l == end || array[l - 1] != value))
 return (middle);
 else if (array[middle] > value)
 return (advanced_recursive_binary(array, start, middle, value));
