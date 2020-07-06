@@ -20,9 +20,9 @@ printf("Searching in array: ");
 for (j = first; j <= last; j++)
 {
 if (j < last)
-    printf("%d, ", array[j]);
+printf("%d, ", array[j]);
 else
-    printf("%d\n", array[j]);
+printf("%d\n", array[j]);
 }
 middle = (last + first) / 2;
 if (value == array[middle])
