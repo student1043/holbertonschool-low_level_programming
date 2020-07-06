@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * _binary_search - Searches using binary search.
+ * binary_searching - binary searching yayyy
  * @array: array
  * @left: left
  * @right: right
