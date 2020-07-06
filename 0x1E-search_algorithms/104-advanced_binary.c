@@ -8,7 +8,7 @@
   * @value: value
   * Return: index
   */
-int advanced_recursive_binary(int *array, size_t start, size_t end, int value)
+int advanced_recursive_binary(int *array, size_t left, size_t right, int value)
 {
 size_t l;
 if (right < left)
