@@ -1,59 +1,36 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
 /**
- * main - Entry point
- *
- * Return: Always EXIT_SUCCESS
+ * binary_search -  function that searches for a value in a sorted array
+ * @array: array
+ * @size: size
+ * @value: value
+ * Return: the index of the value or -1
  */
+
 int binary_search(int *array, size_t size, int value)
 {
-size_t i;
-int k;
-int low = array[0];
-int high = array[0];
-for (i = 0; i < size - 1; i++)
-{
-if (array[i] > high)
-{
-high = array[i];
-}
-}
-for (i = 0; i < size - 1; i++)
-{
-if (array[i] < low)
-{
-low = array[i];
-}
-}
-printf("Searching in array: ");
-for (k = low; k <= high; k++)
-{
-if (k == high)
-{
-printf("%d\n", array[i]);
-break;
-}
-printf("%d, ", array[i]);
-}
-while (low <= high)
-{
-int mid = low + (high - low) / 2;
+size_t middle, first = 0, last = size - 1, j = 0;
 
-if (array[mid] == value)
+if (array == NULL)
+return (-1);
+while (first <= last)
 {
-return mid;
-}
-if (array[mid] < value)
+printf("Searching in array: ");
+for (j = first; j <= last; j++)
 {
-low = mid + 1;
-}
+if (j < last)
+    printf("%d, ", array[j]);
 else
-{
-high = mid - 1;
+    printf("%d\n", array[j]);
 }
+middle = (last + first) / 2;
+if (value == array[middle])
+return (middle);
+else if (value < array[middle])
+last = middle - 1;
+else if (value > array[middle])
+first = middle + 1;
 }
 return (-1);
 }
-
