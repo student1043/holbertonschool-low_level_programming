@@ -9,7 +9,7 @@
  *
  * Return: index
  */
-int binary_search(int *array, size_t left, size_t right, int value)
+int binary_searching(int *array, size_t left, size_t right, int value)
 {
 size_t l;
 
@@ -61,5 +61,5 @@ p = l;
 else
 p = size - 1;
 printf("Value found between indexes [%ld] and [%ld]\n", l / 2, p);
-return (binary_search(array, l / 2, p, value));
+return (binary_searching(array, l / 2, p, value));
 }
